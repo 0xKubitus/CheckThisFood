@@ -87,12 +87,4 @@ On est full et on gère 😎
 ## 6. Notre mentor
 >Qui est ton mentor ?
 
-- Zaratan
-- Pierre Pellegrino
-- Xavier Grenouillet
-- Yousri Laïfa
-- Ophélie Gaudin
-- Jean-Baptiste Vidal
-- Pierre Sarazin
-- Pierre Legoux
-- Violette Marquis
+Nous sommes toujours à la recherche de la perle rare ;)
