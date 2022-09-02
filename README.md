@@ -53,10 +53,12 @@ Elements :
 >De quoi avez-vous besoin pour le backend ? Quelles sont les APIs en back que vous allez brancher et utiliser ?
 
 Backend :
--> API Rails (on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Ruby-Backend-API_Boilerplate)
+-> API Rails 
+(on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Ruby-Backend-API_Boilerplate)
 
 APIs externes
-- APIs de BDD de nutrition (à préciser)
+- APIs de BDD de nutrition 
+(par exemple: https://nutrition-api-dev.esha.com/)
 
 ### 3.4. Mes besoins techniques
 >Balance ici tes compétences, puis tes besoins pour les 2 personnes restantes.
