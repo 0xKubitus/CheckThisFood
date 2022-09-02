@@ -1,0 +1,24 @@
+Hello! 
+
+@Alexis, @Eva et moi sommes sur la fin de la formation "Developpeur" de THP sur React.
+On doit rendre notre projet final le 23 Septembre.
+
+On part sur une application qui permet d'obtenir des infos nutritionnelles sur des aliments ou recettes (particulièrement pour ce qui concerne le diabète). 
+Les utilisateurs pourront effectuer des recherches sur des aliments ou des recettes, les liker/commenter et poster leurs propres recettes.
+
+	-	Pour le Backend, on va utiliser Ruby on Rails avec une BDD en PostgreSQL. 
+
+	-	Pour la partie Frontend, on va utiliser React et Tailwind (ou Bootstrap).
+	
+	- On va aussi devoir extraire les infos nutritionelles en piochant dans une ou plusieurs API externes (BDD de nutrition - par exemple: https://nutrition-api-dev.esha.com/).
+
+
+Dans l'éventualité où ce projet t'intéresse, on voudrait te proposer d'être notre mentor (si bien sûr tu es dispo pour nous accompagner pendant les semaines à venir).
+Le projet commence réellement à partir de la semaine du 12/09 mais THP a besoin qu'on leur communique le nom de notre mentor le plus tôt possible... Est-ce qu'on pourrait avoir ton retour d'ici demain soir, si possible ?
+
+
+P.S: Voici le lien vers notre repo GitHub, où tu trouveras une présentation plus détaillée du projet : https://github.com/0xKubitus/CheckThisFood
+
+
+
+
