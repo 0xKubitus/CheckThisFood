@@ -54,7 +54,7 @@ Elements :
 
 Backend :
 -> API Rails 
-(on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Ruby-Backend-API_Boilerplate)
+(on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Rails-Backend-API_Boilerplate)
 
 APIs externes
 - APIs de BDD de nutrition 
