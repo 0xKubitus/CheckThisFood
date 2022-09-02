@@ -53,7 +53,7 @@ Elements :
 >De quoi avez-vous besoin pour le backend ? Quelles sont les APIs en back que vous allez brancher et utiliser ?
 
 Backend :
--> API Rails
+-> API Rails (on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Ruby-Backend-API_Boilerplate)
 
 APIs externes
 - APIs de BDD de nutrition (à préciser)
@@ -88,3 +88,6 @@ On est full et on gère 😎
 >Qui est ton mentor ?
 
 Nous sommes toujours à la recherche de la perle rare ;)
+
+## 7. Trello du projet
+https://trello.com/b/nlOje27K/checkthisfood-projects-kanban
