@@ -13,7 +13,7 @@ Application qui permet d'obtenir des infos nutritionnelles sur des aliments ou r
 - je peux rechercher un aliment ou une recette
 - je peux voir les attributs nutritionnels de ces derniers
 - je peux poster un aliment ou une recette
-- je peux modérer en tant qu'admin : mettre les recettes/alim en top tendances
+- je peux modérer en tant qu'admin : mettre les recettes/alim en top tendances (cf. Gem 'active-admin')
 
 Bonus / Optionnel
 - je peux voir un feed des derniers postes (ou optionnellement selon mes goûts / catégories)
@@ -57,8 +57,7 @@ Backend :
 (on partira sur une base similaire à celle-ci : https://github.com/0xKubitus/my-Rails-Backend-API_Boilerplate)
 
 APIs externes
-- APIs de BDD de nutrition 
-(par exemple: https://nutrition-api-dev.esha.com/)
+- APIs de BDD de nutrition => https://platform.fatsecret.com/api/Default.aspx?screen=rapih
 
 ### 3.4. Mes besoins techniques
 >Balance ici tes compétences, puis tes besoins pour les 2 personnes restantes.
@@ -89,7 +88,7 @@ On est full et on gère 😎
 ## 6. Notre mentor
 >Qui est ton mentor ?
 
-Nous sommes toujours à la recherche de la perle rare ;)
+El famoso SonFaya (Xavier Grenouillet de son vrai nom) nous accompagne gracieusement pour ce projet !
 
 ## 7. Trello du projet
 https://trello.com/b/nlOje27K/checkthisfood-projects-kanban
