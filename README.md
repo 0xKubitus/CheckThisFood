@@ -91,4 +91,4 @@ On est full et on gère 😎
 El famoso SonFaya (Xavier Grenouillet de son vrai nom) nous accompagne gracieusement pour ce projet !
 
 ## 7. Trello du projet
-https://trello.com/b/nlOje27K/checkthisfood-projects-kanban
+https://trello.com/b/woR8ynzb/check-this-food
