@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-import axios from 'api/axios';
+import axios from '../api/axios';
 const REGISTER_URL = '/users'; // <- here, we are defining a suffix for axios to use in HTTP request for signup (it is devise route for method users/registrations#create)
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/; // NO USE FOR MY RAILS API BOILERPLATE (because no username)

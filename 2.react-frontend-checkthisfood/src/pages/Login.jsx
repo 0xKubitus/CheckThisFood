@@ -1,16 +1,14 @@
-import { useRef, useState, useEffect /*useContext*/ } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
-import { isUserLogged } from 'atoms/userStatus';
-// import IsLoggedContext from 'context/IsLoggedContext';
-// import AuthContext from 'context/AuthProvider';
+import { isUserLogged } from '../atoms/userStatus';
 
-import axios from 'api/axios';
+
+import axios from '../api/axios';
 const LOGIN_URL = '/users/sign_in';
 
 const Login = () => {
     const [status, setStatus] = useAtom(isUserLogged);
-    // const { setIsLogged } = useContext(IsLoggedContext);
-    // const { setAuth } = useContext(AuthContext);
+
 
     const [user, setUser] = useState('');
     const [userEmail, setEmail] = useState('');
