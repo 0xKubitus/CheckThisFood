@@ -22,6 +22,4 @@ function App() {
   );
 }
 
-Salut
-
 export default App;
