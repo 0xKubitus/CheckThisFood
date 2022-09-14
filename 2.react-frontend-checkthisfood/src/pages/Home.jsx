@@ -2,6 +2,7 @@ import Recipes from "../components/Recipes";
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import axios from '../api/axios';
+import NewRecipe from "../components/NewRecipe";
 
 const API_URL = "http://localhost:3001/recipes";
 
@@ -27,6 +28,7 @@ const Home = () => {
     <div>Homepage
       <h1>Les meilleures recettes</h1>
       <Recipes recipes = {recipes}/>
+      <NewRecipe />
     </div>
   )
 }
