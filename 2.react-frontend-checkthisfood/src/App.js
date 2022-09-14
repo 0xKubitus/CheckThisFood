@@ -1,17 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import LoggedOut from './pages/LoggedOut';
 import NewRecipe from './components/NewRecipe';
-
+import "./App.css";
 
 
 function App() {
   return (
-    <>
-    <Navbar/>
+    
+    <div className='App'>
+    <Sidebar/>
     <Routes>
       
         {/* public routes */}
@@ -23,17 +24,14 @@ function App() {
         {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
 
-        {/* routes we need to protect */}
-        
-        {/* <Route path="admin" element={<Admin />} /> */}
+                {/* routes we need to protect */}
 
-        {/* catch all */}
+                {/* <Route path="admin" element={<Admin />} /> */}
 
     </Routes>
     
-    </>
+    </div>
     );
 }
-
 
 export default App;
