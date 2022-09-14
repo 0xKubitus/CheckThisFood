@@ -22,17 +22,14 @@ function App() {
         {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
 
-        {/* routes we need to protect */}
-        
-        {/* <Route path="admin" element={<Admin />} /> */}
+                {/* routes we need to protect */}
 
-        {/* catch all */}
+                {/* <Route path="admin" element={<Admin />} /> */}
 
     </Routes>
     
     </div>
     );
 }
-
 
 export default App;
