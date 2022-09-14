@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
-import SignUp from './pages/SignUp';
-import Login from './pages/Login';
-import LoggedOut from './pages/LoggedOut';
+import Sidebar from './components/Sidebar/Sidebar';
+import Home from './pages/Home/Home';
+import SignUp from './pages/Sign/SignUp';
+import Login from './pages/Sign/Login';
+import LoggedOut from './pages/Sign/LoggedOut';
 import NewRecipe from './components/NewRecipe';
 import "./App.css";
 

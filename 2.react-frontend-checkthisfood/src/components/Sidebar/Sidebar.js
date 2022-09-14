@@ -1,7 +1,7 @@
 import React from "react";
-import "../App.css";
+import "./Sidebar.css";
 import { SidebarData } from "./SidebarData";
-import logo from '../assets/images/Logoctf.png';
+import logo from 'assets/images/Logoctf.png'
 
 function Sidebar() {
   return (

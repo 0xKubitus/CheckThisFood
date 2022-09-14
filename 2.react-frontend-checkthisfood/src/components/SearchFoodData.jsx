@@ -8,16 +8,16 @@ const SearchFoodData = () => {
     const [errMsg, setErrMsg] = useState('');
     const errRef = useRef();
 
-    fetchAPIaccessToken = async (e) => {
-        try {
-            const response = await axios.post();
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg('No Server Response');
-            }
-            errRef.current.focus();
-        }
-    };
+//    fetchAPIaccessToken = async (e) => {
+//         try {
+//             const response = await axios.post();
+//         } catch (err) {
+//             if (!err?.response) {
+//                 setErrMsg('No Server Response');
+//             }
+//             errRef.current.focus();
+//         }
+//     };
 
     const handleSearchFoodSubmit = (e) => {
         e.preventDefault();
