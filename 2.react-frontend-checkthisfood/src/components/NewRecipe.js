@@ -1,13 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import axios from '../api/axios';
 
-
-const API_URL = "http://localhost:3001/recipes";
-
-// const postAPIData = () =>{
-//     return axios.post(API_URL).then((response) => response.data)
-// }
 
 const NewRecipe = () => {
 
@@ -15,6 +8,7 @@ const NewRecipe = () => {
     const [description, setDescription] = useState()
     const [carbohydrates, setCarbohydrates] = useState()
     const [calories, setCalories] = useState()
+    const [image_url, setImage] = useState()
 
     const handleTitleChange = (e) => {
         setTitle(e.target.value);
@@ -32,9 +26,12 @@ const NewRecipe = () => {
         setCalories(e.target.value);
     }
 
+    const handleImageChange = (e) => {
+        setImage(e.target.value);
+    }
     const handleSubmit = (e) => {
        
-        const data = {title, description, carbohydrates, calories}
+        const data = {title, description, carbohydrates, calories, image_url}
     
         fetch("http://localhost:3001/recipes", {
             method: 'POST',
@@ -45,7 +42,7 @@ const NewRecipe = () => {
         })};
 
   return (
-    <div>NewRecipe
+    <div>Ajouter une recette
         <form onSubmit={handleSubmit}> 
                 <label>Titre:</label>
                 <label htmlFor="titre"></label>
@@ -77,6 +74,15 @@ const NewRecipe = () => {
                 <input
                   type="number"
                   required value={calories} onChange={handleCalorieChange}  
+                ></input>
+
+
+<label>URL Image</label>
+                <label htmlFor="image"></label>
+                <input type="text" 
+                  className=""
+                  required value={image_url} onChange={handleImageChange}
+                 
                 ></input>
                 <button type="submit" value="poster recette">Sauvegarder</button>
             </form>

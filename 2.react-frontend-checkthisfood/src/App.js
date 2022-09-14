@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import LoggedOut from './pages/LoggedOut';
+import NewRecipe from './components/NewRecipe';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<LoggedOut />} />
+        <Route path="/recette" element={<NewRecipe />} />
         {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
 
