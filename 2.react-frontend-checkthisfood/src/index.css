@@ -8,11 +8,10 @@
 html {
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
-    color: rgb(255, 242, 215);
     text-align: center;
 }
 
-body {
+/* body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +19,7 @@ body {
     background-image: url('https://luxurylifestyleawards.com/wp-content/uploads/2020/02/MAIN-IMAGE.jpg');
     background-size: cover;
     background-blend-mode: multiply;
-}
+} */
 
 .App {
     display: flex;
@@ -162,7 +161,8 @@ button {
     text-decoration: none;
 }
 
-.cardshow {
+.card {
+    border: solid 1px black;
     min-height: 420px;
     max-width: 120vh;
     margin-left: auto;

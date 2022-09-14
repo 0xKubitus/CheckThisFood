@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import LoggedOut from './pages/LoggedOut';
 
 
+
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
         {/* catch all */}
 
     </Routes>
+    
     </>
     );
 }
