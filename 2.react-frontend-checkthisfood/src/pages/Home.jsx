@@ -1,7 +1,8 @@
-import Recipes from '../components/Recipes';
+import Recipes from 'components/Recipes';
+import SearchFoodData from 'components/SearchFoodData';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import axios from '../api/axios';
+import axios from 'api/axios';
 import '../App.css';
 const API_URL = 'http://localhost:3001/recipes';
 
@@ -27,6 +28,7 @@ const Home = () => {
             Homepage
             <h1>Les meilleures recettes</h1>
             <Recipes recipes={recipes} />
+            <SearchFoodData />
         </div>
     );
 };
