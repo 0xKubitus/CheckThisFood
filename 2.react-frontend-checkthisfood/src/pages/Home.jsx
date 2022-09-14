@@ -25,9 +25,8 @@ const Home = () => {
 
     return (
         <div>
-            <SearchFoodData />
-
             <Recipes recipes={recipes} />
+            <SearchFoodData />
         </div>
     );
 };
