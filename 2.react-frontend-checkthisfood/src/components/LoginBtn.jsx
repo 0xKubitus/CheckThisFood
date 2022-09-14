@@ -1,7 +1,7 @@
-const LoginBtn = () => {
-  return (
-    <button>Se Connecter</button>
-  )
-}
+import { Link } from 'react-router-dom';
 
-export default LoginBtn
+const LoginBtn = () => {
+    return <Link to="login">Se Connecter</Link>;
+};
+
+export default LoginBtn;

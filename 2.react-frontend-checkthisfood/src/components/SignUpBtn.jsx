@@ -1,7 +1,7 @@
-const SignUpBtn = () => {
-  return (
-    <button>S'Inscrire</button>
-  )
-}
+import { Link } from 'react-router-dom';
 
-export default SignUpBtn
+const SignUpBtn = () => {
+    return <Link to="/signup">S'Inscrire</Link>;
+};
+
+export default SignUpBtn;
