@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    
 }
 
 html {
@@ -169,4 +168,6 @@ button {
     margin-right: auto;
 }
 
-
+.search-food-data {
+    border: 3px solid red;
+}
