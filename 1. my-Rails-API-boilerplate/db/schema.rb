@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_09_14_085627) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_08_31_094903) do
+>>>>>>> b081e3394233d636184d3539825d7e70d06d3795
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_085627) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "recipes", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -60,6 +65,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_085627) do
     t.string "image_url"
   end
 
+=======
+>>>>>>> b081e3394233d636184d3539825d7e70d06d3795
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
