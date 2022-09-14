@@ -1,16 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import LoggedOut from './pages/LoggedOut';
-
+import "./App.css";
 
 
 function App() {
   return (
-    <>
-    <Navbar/>
+    
+    <div className='App'>
+    <Sidebar/>
     <Routes>
       
         {/* public routes */}
@@ -29,7 +30,7 @@ function App() {
 
     </Routes>
     
-    </>
+    </div>
     );
 }
 
