@@ -6,6 +6,7 @@ import Login from './pages/Sign/Login';
 import LoggedOut from './pages/Sign/LoggedOut';
 import NewRecipe from './components/NewRecipe';
 import "./App.css";
+import SingleRecipe from './components/SingleRecipe';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<LoggedOut />} />
         <Route path="/recette" element={<NewRecipe />} />
+        <Route path="/recipes/:id" element={<SingleRecipe />} />
         {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
 

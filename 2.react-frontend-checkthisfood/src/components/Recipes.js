@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import {BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-const Recipes = (props) => {
+const Recipes = (recipe) => {
+
     return (
-        <div>
-            {props.recipes.map((recipe) => {
+        <div key={recipe.id}>
+            {recipe.recipes.map((recipe) => {
                 return (
                     <div className="card">
                         {' '}
@@ -12,6 +14,9 @@ const Recipes = (props) => {
                         <p>{recipe.description}</p>
                         <p>Glucides : {recipe.carbohydrates}</p>
                         <p>Calories : {recipe.calories}</p>
+                        
+                        <Link recipe ={recipe.id} to={`recipes/${recipe.id}`}>voir</Link>
+                        
                     </div>
                 );
             })}

@@ -5,13 +5,13 @@ import { useEffect } from 'react';
 import axios from 'api/axios';
 import 'App.css';
 import './Home.css';
-import NewRecipe from "components/NewRecipe";
-import { Routes, Route } from 'react-router-dom';
-import { Link } from "react-router-dom";
+
+import {Route, BrowserRouter} from 'react-router-dom'
 
 const API_URL = 'http://localhost:3001/recipes';
 const getAPIData = () => {
     return axios.get(API_URL).then((response) => response.data);
+    
 };
 
 const Home = () => {
@@ -32,6 +32,7 @@ const Home = () => {
             Homepage
             <h1>Les meilleures recettes</h1>
             <Recipes recipes={recipes} />
+
             <SearchFoodData />
         </div>
     );
