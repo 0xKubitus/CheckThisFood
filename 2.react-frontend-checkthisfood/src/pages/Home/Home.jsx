@@ -5,15 +5,15 @@ import { useEffect } from 'react';
 import axios from 'api/axios';
 import 'App.css';
 import './Home.css';
-import NewRecipe from "components/NewRecipe";
-import { Routes, Route } from 'react-router-dom';
-import { Link } from "react-router-dom";
 import RecipeReviewCard from 'components/Card/Card';
 import { Grid } from "@mui/material"
+import {Route, BrowserRouter} from 'react-router-dom'
+
 
 const API_URL = 'http://localhost:3001/recipes';
 const getAPIData = () => {
     return axios.get(API_URL).then((response) => response.data);
+    
 };
 
 
@@ -48,6 +48,7 @@ const Home = () => {
                 </Grid>
                 </Grid>
             <Recipes recipes={recipes} />
+
             <SearchFoodData />
         </div>
     );
