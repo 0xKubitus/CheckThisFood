@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :recipes
+ 
+  resources :recipes do 
+  resources :comments
+  end
   devise_for :users,
              controllers: {
                sessions: 'users/sessions',
