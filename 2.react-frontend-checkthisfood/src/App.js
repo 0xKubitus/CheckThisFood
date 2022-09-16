@@ -16,9 +16,10 @@ function App() {
     <div className='App'>
       
     <Sidebar/>
-    
+
     <div className='main'>
     <Navbar/>
+
     <Routes>
       
         {/* public routes */}
