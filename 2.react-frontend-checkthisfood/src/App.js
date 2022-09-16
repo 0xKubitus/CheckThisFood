@@ -37,7 +37,7 @@ function App() {
                 {/* <Route path="admin" element={<Admin />} /> */}
 
     </Routes>
-    
+    </div>
     </div>
     );
 }
