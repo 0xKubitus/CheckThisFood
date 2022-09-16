@@ -5,17 +5,18 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
 
-    render json: @recipes
+    render json: RecipeSerializer.new(@recipes).serializable_hash.to_json
   end
 
   # GET /recipes/1
   def show
-    render json: @recipe
+    recipe = Recipe.find(params[:id])
+    render json: RecipeSerializer.new(recipe).serializable_hash.to_json
   end
 
   # POST /recipes
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = RecipeSerializer.new(recipe_params).serializable_hash.to_json
 
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe

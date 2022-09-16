@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
 
 const ShowRecipe = (props) => {
-  
-  return (
-    <div>
-       
-       
+    const { title, description, carbohydrates, calories, image_url } = props.attributes;
 
-        <h1>{props.attributes.comments}</h1>
-        <h1>{props.attributes.title}</h1>
-        
-        
-        <img src={props.attributes.image_url} width={300}></img>
-        <p>{props.attributes.description}</p>
-        <p>Glucides : {props.attributes.carbohydrates}</p>
-                        <p>Calories : {props.attributes.calories}</p>
+    return (
+        <div>
+            <h1>{title}</h1>
 
-                        <p>{props.comments.map((props => props.content))}</p>
-    </div>
-  )
-}
+            <img
+                src={image_url}
+                width={300}></img>
+            <p>{description}</p>
+            <h3>Informations nutritionnelles par partion : </h3>
+            <p>Glucides : {carbohydrates} grammes</p>
+            <p>Calories : {calories} kcal</p>
 
-export default ShowRecipe
+            <div>
+                <h3>Commentaires : </h3>
+            </div>
+        </div>
+    );
+};
+
+export default ShowRecipe;
