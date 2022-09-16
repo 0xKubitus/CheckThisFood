@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
+import Navbar from 'components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import SignUp from './pages/Sign/SignUp';
 import Login from './pages/Sign/Login';
@@ -13,8 +14,12 @@ function App() {
   return (
     
     <div className='App'>
+      
     <Sidebar/>
+
     <div className='main'>
+    <Navbar/>
+
     <Routes>
       
         {/* public routes */}
