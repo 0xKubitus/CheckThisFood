@@ -1,0 +1,13 @@
+.navbar-main {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-first-link {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navbar-second-link {
+    text-decoration: none;
+}
