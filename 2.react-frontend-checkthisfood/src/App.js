@@ -14,7 +14,6 @@ function App() {
     
     <div className='App'>
     <Sidebar/>
-    <div className='main'>
     <Routes>
       
         {/* public routes */}
@@ -32,7 +31,7 @@ function App() {
                 {/* <Route path="admin" element={<Admin />} /> */}
 
     </Routes>
-    </div>
+    
     </div>
     );
 }

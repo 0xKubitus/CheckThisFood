@@ -5,17 +5,14 @@ import { useEffect } from 'react';
 import axios from 'api/axios';
 import 'App.css';
 import './Home.css';
-import RecipeReviewCard from 'components/Card/Card';
-import { Grid } from "@mui/material"
-import {Route, BrowserRouter} from 'react-router-dom'
 
+import {Route, BrowserRouter} from 'react-router-dom'
 
 const API_URL = 'http://localhost:3001/recipes';
 const getAPIData = () => {
     return axios.get(API_URL).then((response) => response.data);
     
 };
-
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
@@ -31,22 +28,9 @@ const Home = () => {
     }, []);
 
     return (
-        
         <div className="Home">
-            
             Homepage
             <h1>Les meilleures recettes</h1>
-            <Grid container>
-                <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                </Grid>
             <Recipes recipes={recipes} />
 
             <SearchFoodData />
