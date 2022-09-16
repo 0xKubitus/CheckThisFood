@@ -27,7 +27,7 @@ const SingleRecipe = (props) => {
 
     // useEffect(() => {
     //     const API_URL_COMMENTS = `http://localhost:3001/recipes/${Id.id}/comments`;
-    //     axios.get(API_URL_COMMENTS).then((resp) => setComments(resp.data))
+    //     axios.get(API_URL_COMMENTS).then((resp) =>console.log(resp.data))
     //      // eslint-disable-next-line
     // }, []);
 

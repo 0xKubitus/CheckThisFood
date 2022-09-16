@@ -17,6 +17,7 @@ const ShowRecipe = (props) => {
 
             <div>
                 <h3>Commentaires : </h3>
+                <p>En construction</p>
             </div>
         </div>
     );
