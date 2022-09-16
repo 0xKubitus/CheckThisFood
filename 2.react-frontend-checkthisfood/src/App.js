@@ -16,9 +16,10 @@ function App() {
     <div className='App'>
       
     <Sidebar/>
-    
+
     <div className='main'>
     <Navbar/>
+
     <Routes>
       
         {/* public routes */}
@@ -36,7 +37,7 @@ function App() {
                 {/* <Route path="admin" element={<Admin />} /> */}
 
     </Routes>
-    </div>
+    
     </div>
     );
 }
