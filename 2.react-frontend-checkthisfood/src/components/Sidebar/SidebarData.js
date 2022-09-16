@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
@@ -7,37 +7,41 @@ import BrunchDiningIcon from '@mui/icons-material/BrunchDining';
 
 export const SidebarData = [
     {
-        title:"Accueil",
-        icon:<HomeIcon />,
-        link:"/"
+        title: 'Accueil',
+        icon: <HomeIcon />,
+        link: '/',
     },
 
     {
-        title:"Mes Favoris",
-        icon:<FavoriteIcon />,
-        link:"/liked"
-    },
-    
-    {
-        title:"Recettes",
-        link:"/recipe"
+        title: 'Mes Favoris',
+        icon: <FavoriteIcon />,
+        link: '/liked',
     },
 
     {
-        title:"Petit-Déjeuner",
-        icon:<BakeryDiningIcon />,
-        link:"/breakfast"
+        title: 'Recettes',
+        link: '/recipe',
     },
 
     {
-        title:"Déjeuner",
-        icon:<RamenDiningIcon />,
-        link:"/lunch"
+        title: 'Petit-Déjeuner',
+        icon: <BakeryDiningIcon />,
+        link: '/breakfast',
     },
 
     {
-        title:"Dîner",
-        icon:<BrunchDiningIcon />,
-        link:"/diner"
+        title: 'Déjeuner',
+        icon: <RamenDiningIcon />,
+        link: '/lunch',
     },
-]
+
+    {
+        title: 'Dîner',
+        icon: <BrunchDiningIcon />,
+        link: '/diner',
+    },
+    {
+        title: 'Recherche',
+        link: '/searchfood',
+    },
+];
