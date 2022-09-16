@@ -1,12 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
     width: 100vw;
     height: 100vh;
     background-color: blanchedalmond;
+    display: flex;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+height: 100vh;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 
