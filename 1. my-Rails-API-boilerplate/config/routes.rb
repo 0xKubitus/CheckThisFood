@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'welcome#index'
   resources :recipes
   devise_for :users,
              controllers: {
