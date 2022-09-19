@@ -2,6 +2,9 @@ import React from 'react';
 
 const ShowRecipe = (props) => {
     const { title, description, carbohydrates, calories, image_url } = props.attributes;
+//    const {comment} = props.comments
+
+    
 
     return (
         <div>
@@ -17,7 +20,7 @@ const ShowRecipe = (props) => {
 
             <div>
                 <h3>Commentaires : </h3>
-                <p>En construction</p>
+                {/* <p>{comment}</p> */}
             </div>
         </div>
     );

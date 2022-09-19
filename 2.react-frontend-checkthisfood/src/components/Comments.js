@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Comments = (props) => {
+const Comments = ({title}) => {
+
   return (
 
         <div> 
             
-            <h1></h1>    
+            <li>{title}</li>    
         
          
         </div>
