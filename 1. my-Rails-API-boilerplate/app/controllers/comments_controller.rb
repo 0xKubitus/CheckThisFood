@@ -16,13 +16,13 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
+    @comment = recipe.comments.new(comment_params)
 
-    if @comment.save
-      render json: CommentSerializer.new(@comment).serializable_hash.to_json
-    else
-      render json: @comment.errors, status: :unprocessable_entity
-    end
+        if @comment.save
+          render json: serializer(@comment)
+        else
+          render json: @comment.errors, status: :unprocessable_entity
+        end
   end
 
   # PATCH/PUT /comments/1
@@ -44,6 +44,17 @@ class CommentsController < ApplicationController
     def set_comment
       @comment = Comment.find(params[:id])
     end
+
+    def recipe
+      @recipe ||= Recipe.find(params[:recipe_id])
+
+    end
+          # fast_jsonapi serializer
+          def serializer(records, options = {})
+          CommentSerializer
+            .new(records, options)
+            .serializable_hash.to_json
+        end
 
     # Only allow a list of trusted parameters through.
     def comment_params

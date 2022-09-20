@@ -9,7 +9,7 @@ import CommentForm from './CommentForm';
 const SingleRecipe = (props) => {
     const Id = useParams();
     const [recipe, setRecipe] = useState({});
-    const [comments, setComments] = useState({});
+    const [comment, setComment] = useState({});
     const [loaded, setLoaded] = useState(false)
    
 
@@ -35,7 +35,7 @@ const SingleRecipe = (props) => {
 
         const API_URL = `http://localhost:3001/recipes/${Id.id}`;
         axios.get(API_URL)
-        .then(resp => {setComments(resp.data.data.relationships)
+        .then(resp => {setComment(resp.data.data.relationships)
             
         setLoaded(true)
     })    
@@ -43,7 +43,31 @@ const SingleRecipe = (props) => {
          // eslint-disable-next-line
     }, [])
 
-    console.log(recipe.included)
+const handleChange = (e) => {
+    e.preventDefault();
+    
+    setComment(Object.assign({}, comment.data, {[e.target.name]: e.target.value}))
+    console.log('comment',comment)
+  
+
+}
+
+
+const handleSubmit = (e) => {
+   
+    const recipe_id = recipe.data.id 
+    console.log(recipe_id)
+    console.log(comment)
+    axios.post('http://localhost:3001/comments/', {comment, recipe_id})
+    .then(resp => {
+        // const included = [...recipe.included, resp.data]
+        // setRecipe({recipe, included})
+        // setComment({})
+      
+    })
+    .catch(resp => {})
+    
+}
  
 
     return (
@@ -63,8 +87,13 @@ title={item.attributes.content}
 ))
            
 }
+{loaded && 
 
-<CommentForm/>
+<CommentForm
+handleChange={handleChange}
+handleSubmit={handleSubmit}
+attributes={recipe.data.attributes}
+comment={comment}/>}
 
         </div>
     );
