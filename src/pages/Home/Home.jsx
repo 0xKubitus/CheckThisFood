@@ -21,9 +21,6 @@ const Home = () => {
     console.log(recipes);
     return (
         <div className="Home">
-            <SearchRecipe />
-            <SearchFoodData />
-
             <h1>Les meilleures recettes</h1>
 
             <Grid container>

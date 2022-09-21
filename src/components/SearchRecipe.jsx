@@ -20,16 +20,19 @@ const SearchRecipe = () => {
                     // },
                 },
             });
-            const data = await response.json();
-            console.log('data type =', typeof data); // SHOULD BE A COMMENT
-            console.log(data);
-            console.log(data.hits[0].recipe);
+            if (response.status === 200) {
+                const data = await response.json();
+                console.log('data type =', typeof data); // SHOULD BE A COMMENT
+                console.log(data);
+                console.log(data.hits[0].recipe);
+            } else if (response.status === 404) {
+                console.log('Error 404 - Not Found');
+            } else if (response.status === 500) {
+                console.log('Error 500 - Internal Server Error');
+            }
         } catch (error) {
             console.error('Response error:', error.message);
         }
-        /* 
-      Attention cependant : si une requête HTTP aboutit sur une réponse avec un code 404 Not Found ou même 500 Internal Server Error, la fonction fetch() ne va pas considérer qu'il s'agit d'une erreur ! En effet, l'API a bien répondu quelque chose, donc de son point de vue tout a fonctionné. Le catch ne sera déclenché que si la requête n'aboutit pas (par exemple s'il n'y a pas de réseau), ou si le décodage JSON a échoué car les données sont mal formatées (problème qui arrive plus souvent qu'on ne le croit).
-      */
     };
 
     const handleRecipeSearchFormSubmit = (e) => {
