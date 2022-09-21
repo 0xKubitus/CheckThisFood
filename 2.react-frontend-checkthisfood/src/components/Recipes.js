@@ -1,27 +1,27 @@
 import React from 'react';
 import {Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import axios from 'api/axios';
+import Home from '../pages/Home/Home';
 
-const Recipes = (recipe) => {
+const Recipes = ({title, description, carbohydrates, calories, image, id}) => {
+
+
 
     return (
-        <div key={recipe.id}>
-            {recipe.recipes.map((recipe) => {
-                return (
-                    <div className="card">
-                        {' '}
-                        <h2> {recipe.title} </h2>
-                        <img src={recipe.image_url} width={300}></img>
-                        <p>{recipe.description}</p>
-                        <p>Glucides : {recipe.carbohydrates}</p>
-                        <p>Calories : {recipe.calories}</p>
+
+        <div>
+                       <h2> {title} </h2>
+                        <img src={image} width={300}></img> 
+                        <p>{description}</p>
+                        <p>Glucides : {carbohydrates}</p>
+                        <p>Calories : {calories}</p> 
                         
-                        <Link recipe ={recipe.id} to={`recipes/${recipe.id}`}>voir</Link>
+                       <Link to={`recipes/${id}`}>voir</Link> 
                         
                     </div>
-                );
-            })}
-        </div>
-    );
-};
+                );}
 
+     
+ 
 export default Recipes;

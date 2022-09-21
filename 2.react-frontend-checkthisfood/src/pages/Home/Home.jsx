@@ -10,32 +10,24 @@ import { Grid } from "@mui/material"
 import {Route, BrowserRouter} from 'react-router-dom'
 
 
-const API_URL = 'http://localhost:3001/recipes';
-const getAPIData = () => {
-    return axios.get(API_URL).then((response) => response.data);
-    
-};
-
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        let mounted = true;
-        getAPIData().then((items) => {
-            if (mounted) {
-                setRecipes(items);
-            }
-        });
-        return () => (mounted = false);
-    }, []);
 
+        const API_URL = 'http://localhost:3001/recipes';
+        axios.get(API_URL).then((resp) => setRecipes(resp.data.data));
+         // eslint-disable-next-line
+    }, []);
+console.log(recipes)
     return (
         
         <div className="Home">
             
             Homepage
             <h1>Les meilleures recettes</h1>
+        
             <Grid container>
                 <Grid item xs={4}>
                 <RecipeReviewCard/>
@@ -47,7 +39,22 @@ const Home = () => {
                 <RecipeReviewCard/>
                 </Grid>
                 </Grid>
-            <Recipes recipes={recipes} />
+              
+
+{ 
+recipes.map((item => 
+
+<Recipes 
+title={item.attributes.title}
+description={item.attributes.description} 
+carbohydrates={item.attributes.carbohydrates}
+calories={item.attributes.calories}
+image={item.attributes.image_url}
+id={item.id} />
+))
+           
+}
+
 
             <SearchFoodData />
         </div>
