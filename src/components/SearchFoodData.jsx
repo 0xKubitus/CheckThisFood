@@ -9,7 +9,7 @@ const SearchFoodData = () => {
     const [searchInput, setSearchInput] = useState('');
     const [searchResult, setSearchResult] = useState(null);
 
-    const fetchEdemamFoodAPI = async (foodToSearch) => {
+    const fetchGetEdemamFoodAPI = async (foodToSearch) => {
         try {
             const response = await fetch(`${API_BASE_URL}${API_RECIPE_SEARCH_URL}&app_id=${API_ID}&app_key=${API_KEY}&ingr=${foodToSearch}&nutrition-type=cooking`, {
                 mode: 'cors',
@@ -24,8 +24,8 @@ const SearchFoodData = () => {
             if (response.status === 200) {
                 const data = await response.json();
                 // console.log('data type =', typeof data); // SHOULD BE A COMMENT
-                console.log('data = ', data);
-                console.log('nutriments du 1er resultat de la recherche = ', data.hints[0].food.nutrients);
+                console.log('data = ', data); // SHOULD BE A COMMENT
+                console.log('nutriments du 1er resultat de la recherche = ', data.hints[0].food.nutrients); // SHOULD BE A COMMENT
 
                 setSearchResult(data.hints[0]);
             } else if (response.status === 404) {
@@ -43,7 +43,7 @@ const SearchFoodData = () => {
 
         alert(`your input : ${searchInput}`); // SHOULD BE A COMMENT
 
-        fetchEdemamFoodAPI(searchInput);
+        fetchGetEdemamFoodAPI(searchInput);
     };
 
     return (
