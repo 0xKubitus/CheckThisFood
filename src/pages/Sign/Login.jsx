@@ -1,6 +1,10 @@
 import { useRef, useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { isUserLogged } from 'atoms/userStatus';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import './Sign.css';
 
 import axios from 'api/axios';
 const LOGIN_URL = '/users/sign_in';
@@ -72,7 +76,7 @@ const Login = () => {
         <>
             {success ? (
                 <section>
-                    <h1>You are logged in!</h1>
+                    <h1>Connecté !</h1>
                     <button>Go to Home</button>
                 </section>
             ) : !status ? (
@@ -80,20 +84,30 @@ const Login = () => {
                     <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
                         {errMsg}
                     </p>
-                    <h1>Sign In / Login</h1>
+                    <h1>LOGIN</h1>
+                    <br />
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">Username</label>
-                        <input type="text" id="username" ref={userRef} autoComplete="off" onChange={(e) => setUser(e.target.value)} value={user} required />
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={(e) => setPwd(e.target.value)} value={pwd} required />
-                        <button>Sign In</button>
+                        <label htmlFor="username">Nom d'utilisateur</label>
+                        <br />
+                        <TextField variant="outlined" size="small" type="text" id="username" ref={userRef} autoComplete="off" onChange={(e) => setUser(e.target.value)} value={user} required />
+                        <br />
+                        <br />
+                        <label htmlFor="password">Mot de passe</label>
+                        <br />
+                        <TextField variant="outlined" size="small" type="password" id="password" onChange={(e) => setPwd(e.target.value)} value={pwd} required />
+                        <br />
+                        <br />
+                        <Button variant="outlined" onClick={handleSubmit}>Login</Button>
                     </form>
                     <p>
-                        Not registered yet?
+                    <br />
+                        Pas encore inscrit ?
                         <br />
                         <span className="line">
                             {/* put router link here */}
-                            <button>Go to Sign up</button>
+                            <Link to='/signup' style={{ textDecoration: 'none' }}>
+                            <Button variant="outlined">S'inscrire</Button>
+                            </Link>
                         </span>
                     </p>
                 </section>

@@ -1,8 +1,12 @@
 import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
-
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
+import './Sign.css';
 import axios from 'api/axios';
+
 const REGISTER_URL = '/users'; // <- here, we are defining a suffix for axios to use in HTTP request for signup (it is devise route for method users/registrations#create)
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/; // NO USE FOR MY RAILS API BOILERPLATE (because no username)
@@ -112,7 +116,7 @@ const SignUp = () => {
             {/* replace Sign Up button below by a router link: */}
             {success ? (
                 <section>
-                    <h1>Success!</h1>
+                    <h1>Inscrit avec succès!</h1>
                     <button>Sign Up</button>
                 </section>
             ) : (
@@ -120,19 +124,21 @@ const SignUp = () => {
                     <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
                         {errMsg}
                     </p>
-                    <h1>Register / Sign Up</h1>
+                    <h1>INSCRIPTION</h1>
+                    <br />
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">
-                            Username:
+                           Nom d'utilisateur 
                             <span className={validName ? 'valid' : 'hide'}>
-                                <FontAwesomeIcon icon={solid('check')} />
+                              
                             </span>
                             <span className={validName || !user ? 'hide' : 'invalid'}>
-                                <FontAwesomeIcon icon={solid('xmark')} />
+                                
                             </span>
                         </label>
+                        <br />
 
-                        <input
+                        <TextField variant="outlined" size="small" 
                             type="text"
                             id="username"
                             ref={userRef}
@@ -146,24 +152,26 @@ const SignUp = () => {
                         />
 
                         <p id="usernamenote" className={userFocus && user && !validName ? 'instructions' : 'offscreen'}>
-                            <FontAwesomeIcon icon={solid('circle-info')} />
-                            4 to 24 characters.
-                            <br />
-                            Must begin with a letter.
-                            <br />
-                            Letters, numbers, underscores, hyphens allowed.
+                            
+                            <i>4 à 24 caractères.
+                          
+                            Doit commencer par une lettre.
+                          
+                            Lettres, nombres, underscores, tirets autorisés</i>
                         </p>
+                        <br />
 
                         <label htmlFor="userEmail">
-                            Email:
+                            Email
                             <span className={validEmail ? 'valid' : 'hide'}>
-                                <FontAwesomeIcon icon={solid('check')} />
+                                
                             </span>
                             <span className={validEmail || !userEmail ? 'hide' : 'invalid'}>
-                                <FontAwesomeIcon icon={solid('xmark')} />
+                                
                             </span>
                         </label>
-                        <input
+                        <br />
+                        <TextField variant="outlined" size="small" 
                             type="text"
                             id="email"
                             ref={userRef}
@@ -177,23 +185,25 @@ const SignUp = () => {
                         />
 
                         <p id="emailnote" className={emailFocus && userEmail && !validEmail ? 'instructions' : 'offscreen'}>
-                            <FontAwesomeIcon icon={solid('circle-info')} />
-                            Must respect email adress standards.
-                            <br />
-                            (Only a single account is allowed per email adress)
+                            
+                           
+                            
+                            <i>Un compte par email autorisé</i>
                         </p>
+                        <br />
 
                         <label htmlFor="password">
-                            Password:
+                            Mot de passe
                             <span className={validPwd ? 'valid' : 'hide'}>
-                                <FontAwesomeIcon icon={solid('check')} />
+                                
                             </span>
                             <span className={validPwd || !pwd ? 'hide' : 'invalid'}>
-                                <FontAwesomeIcon icon={solid('xmark')} />
+                             
                             </span>
                         </label>
+                        <br />
 
-                        <input
+                        <TextField variant="outlined" size="small" 
                             type="password"
                             id="password"
                             onChange={(e) => setPwd(e.target.value)}
@@ -204,25 +214,27 @@ const SignUp = () => {
                             onBlur={() => setPwdFocus(false)}
                         />
                         <p id="pwdnote" className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}>
-                            <FontAwesomeIcon icon={solid('circle-info')} />
-                            8 to 24 characters.
-                            <br />
-                            Must include uppercase and lowercase letters, a number and a special character.
-                            <br />
-                            Allowed special chars: <span aria-label="exlamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                            
+                            <i>8 à 24 caractères.
+                           
+                           Doit contenir une majuscule, minuscule, un nombre et un caractère spécial : 
+                            
+
+                             <span aria-label="exlamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span></i>
                         </p>
 
+                        <br />
                         <label htmlFor="confirm_pwd">
-                            Confirm Password:
+                            Confirmez votre mot de passe :
                             <span className={validPwdConfirm && pwdConfirm ? 'valid' : 'hide'}>
-                                <FontAwesomeIcon icon={solid('check')} />
+                                
                             </span>
                             <span className={validPwdConfirm || !pwdConfirm ? 'hide' : 'invalid'}>
-                                <FontAwesomeIcon icon={solid('xmark')} />
+                                
                             </span>
                         </label>
-
-                        <input
+                        <br />
+                        <TextField variant="outlined" size="small" 
                             type="password"
                             id="confirm_pwd"
                             onChange={(e) => setPwdConfirm(e.target.value)}
@@ -233,17 +245,23 @@ const SignUp = () => {
                             onBlur={() => setPwdConfirmFocus(false)}
                         />
                         <p id="confirmnote" className={pwdConfirmFocus && !validPwdConfirm ? 'instructions' : 'offscreen'}>
-                            <FontAwesomeIcon icon={solid('circle-info')} />
-                            Must match the first password input field.
+                            
+                            <i>Doit correspondre au mot de passe défini</i>
+                           
                         </p>
-                        <button disabled={!validName || !validPwd || !validPwdConfirm ? true : false}>Sign Up</button>
+                        <br />
+                        <Button variant="outlined" onClick={handleSubmit} disabled={!validName || !validPwd || !validPwdConfirm ? true : false}>Inscription</Button>
                     </form>
                     <p>
-                        Already registered?
+                    <br />
+                        Déjà inscrit ?
                         <br />
                         <span className="line">
-                            {/* replace button by a router link here: */}
-                            <button>Go to Login</button>
+                           
+                            
+                            <Link to='/login' style = {{ textDecoration: 'none' }}>
+                            <Button variant="outlined">Se connecter</Button>
+                            </Link>
                         </span>
                     </p>
                 </section>
