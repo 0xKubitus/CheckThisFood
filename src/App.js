@@ -6,41 +6,41 @@ import SignUp from './pages/Sign/SignUp';
 import Login from './pages/Sign/Login';
 import LoggedOut from './pages/Sign/LoggedOut';
 import NewRecipe from './components/NewRecipe';
-import "./App.css";
+import './App.css';
 import SingleRecipe from './components/SingleRecipe';
 import Show from './pages/Show/Show';
-
+import SearchFoodData from 'components/SearchFoodData';
+import SearchRecipe from 'components/searchRecipe';
 
 function App() {
-  return (
-    
-    <div className='App'>
-      
-    <Sidebar/>
+    return (
+        <div className="App">
+            <Sidebar />
 
-    <div className='main'>
-    <Navbar/>
+            <div className="main">
+                <Navbar />
 
-    <Routes>
-      
-        {/* public routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<LoggedOut />} />
-        <Route path="/recette" element={<NewRecipe />} />
-        <Route path="/recipes/:id" element={<SingleRecipe />} />
-        <Route path="/show" element={<Show/>} />
-        {/* <Route path="/unauthorized" element={<Unauthorized />} />
+                <Routes>
+                    {/* public routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/logout" element={<LoggedOut />} />
+                    <Route path="/recette" element={<NewRecipe />} />
+                    <Route path="/recipes/:id" element={<SingleRecipe />} />
+                    <Route path="/show" element={<Show />} />
+                    <Route path="/search_food_data" element={<SearchFoodData />} />
+                    <Route path="/search_recipe" element={<SearchRecipe />} />
+
+                    {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
 
-                {/* routes we need to protect */}
+                    {/* routes we need to protect */}
 
-                {/* <Route path="admin" element={<Admin />} /> */}
-
-    </Routes>
-    </div>
-    </div>
+                    {/* <Route path="admin" element={<Admin />} /> */}
+                </Routes>
+            </div>
+        </div>
     );
 }
 
