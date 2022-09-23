@@ -15,6 +15,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { styled, alpha } from '@mui/material/styles';
 import AddIcon from '@mui/icons-material/Add';
 import LoggedOut from 'pages/Sign/LoggedOut';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const StyledMenu = styled((props) => (
     <Menu
@@ -75,7 +76,8 @@ const Navbar = () => {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon />}>
+                endIcon={<KeyboardArrowDownIcon/>}>
+                    <AccountCircleIcon fontSize="small" sx={{ mr: 2 }}  /> 
                 Mon compte
             </Button>
 

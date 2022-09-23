@@ -1,5 +1,21 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import TextField from '@mui/material/TextField';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
+import Button from '@mui/material/Button';
+import './Newrecipe.css'
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import DataSaverOnIcon from '@mui/icons-material/DataSaverOn';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+
+
+
+
+
+
 
 
 const NewRecipe = () => {
@@ -9,6 +25,7 @@ const NewRecipe = () => {
     const [carbohydrates, setCarbohydrates] = useState()
     const [calories, setCalories] = useState()
     const [image_url, setImage] = useState()
+    const [categories, setCategories] = useState()
 
     const handleTitleChange = (e) => {
         setTitle(e.target.value);
@@ -22,6 +39,11 @@ const NewRecipe = () => {
         setCarbohydrates(e.target.value);
     }
 
+
+    const handleCategoryChange = (e) => {
+      setCategories(e.target.value);
+  }
+
     const handleCalorieChange = (e) => {
         setCalories(e.target.value);
     }
@@ -31,7 +53,7 @@ const NewRecipe = () => {
     }
     const handleSubmit = (e) => {
        
-        const data = {title, description, carbohydrates, calories, image_url}
+        const data = {title, description, carbohydrates, calories, image_url, categories}
     
         fetch("http://localhost:3001/recipes", {
             method: 'POST',
@@ -42,51 +64,101 @@ const NewRecipe = () => {
         })};
 
   return (
-    <div>Ajouter une recette
+    <div> <h1>AJOUTER UNE RECETTE</h1>
+      <br />
+      <br />
+
+      <Box sx={{ flexGrow: 1,  mt: 5}} >
         <form onSubmit={handleSubmit}> 
-                <label>Titre:</label>
+
+        
+        <Grid container spacing={2} sx={{ height: '100%', border:0.5, pb: 5, pt: 4, borderColor: '#2f4050', borderRadius: 1 }}>
+        <Grid item xs={8}>
+
+       
+                <label>Titre</label>
+                <br />
                 <label htmlFor="titre"></label>
-                <input
+                <br />
+                <TextField sx={{ width: '80%' }}
                   className="textarea"
                   type="text"
                   required value={title} onChange={handleTitleChange}
                   placeholder="titre de la recette"
-                ></input>
-
+                ></TextField>
+<br />
+<br />
 <label>Description</label>
+
                 <label htmlFor="description"></label>
-                <textarea
-                  className=""
+                <br /><br />
+                <TextField sx={{ width: '80%', height: '200'  }} className="textarea"
+                multiline= {true}
+                maxRows={20}
                   type="text"
                   required value={description} onChange={handleDescriptionChange}
-                  placeholder="tapez votre recette"
-                ></textarea>
+                  placeholder="Description"
+                ></TextField>
+                <br />  <br />
+
+
+                
+                </Grid>
+                <Grid item xs={4}>
+
+                <label>Catégorie</label>
+                <label htmlFor="categories"></label>
+                <br /><br />
+                
+
+                <select onChange={handleCategoryChange} label='catégorie'>
+                <option required value={categories} ></option> 
+                  <option required value={categories} >breakfast</option> 
+                  <option required value={categories} >[\"lunch/dinner\"]</option>
+                  <option required value={categories} >[\"snack\"]</option>  
+                </select>
+                <br /><br />
 
 <label>Glucides</label>
                 <label htmlFor="glucides"></label>
-                <input
+                <br /><br />
+                <TextField sx={{ width: '70%'}}
+                size="small"
                   type="number"
                   required value={carbohydrates} onChange={handleSugarChange}
-                ></input>
+                ></TextField>
+                <br /><br />
 
 <label>Calories</label>
                 <label htmlFor="calories"></label>
-                <input
+                <br /><br />
+                <TextField sx={{ width: '70%' }}
+                 size="small"
                   type="number"
                   required value={calories} onChange={handleCalorieChange}  
-                ></input>
+                ></TextField>
 
-
+<br /><br />
 <label>URL Image</label>
+<br /><br />
                 <label htmlFor="image"></label>
-                <input type="text" 
+                <TextField  sx={{ width: '70%' }}
+                size='small'
+                type="text" 
                   className=""
                   required value={image_url} onChange={handleImageChange}
                  
-                ></input>
-                <button type="submit" value="poster recette">Sauvegarder</button>
-            </form>
+                ></TextField>
+                <br /><br /><br />
+                <Button style={{ backgroundColor: '#2f4050' }} sx={{ width: '70%' }} variant="contained" type="submit" value="poster recette">Sauvegarder <DataSaverOnIcon sx={{ ml: 2 }}/></Button>
+                
+                </Grid>
+                </Grid>
+                 </form>
+                
+                </Box> 
     </div>
+    
     
     
   )
