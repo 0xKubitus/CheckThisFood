@@ -8,6 +8,7 @@ import './Home.css';
 import RecipeReviewCard from 'components/Card/Card';
 import { Grid } from '@mui/material';
 import { Route, BrowserRouter } from 'react-router-dom';
+import { Margin } from '@mui/icons-material';
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
@@ -37,6 +38,12 @@ const Home = () => {
                 <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
             ))}
             <SearchFoodData />
+            <SearchFoodData />
+            <Grid container sx={{ justifyContent: 'center', padding: '5px' }}>
+                {recipes.map((item) => (
+                    <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
+                ))}
+            </Grid>
         </div>
     );
 };
