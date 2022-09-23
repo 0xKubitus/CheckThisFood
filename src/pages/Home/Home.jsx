@@ -28,11 +28,9 @@ console.log(recipes)
             Homepage
             <h1>Les meilleures recettes</h1>
             <SearchFoodData />
-            <Grid container sx={{justifyContent: 'center', padding:'5px'}}>
-                
+            <Grid container sx={{justifyContent: 'center', padding:'5px'}}>    
                 { 
 recipes.map((item => 
-
 <Recipes 
 title={item.attributes.title}
 description={item.attributes.description} 
@@ -42,16 +40,9 @@ image={item.attributes.image_url}
 id={item.id} />
 ))
            
-}
-                
+}         
 
-                </Grid>
-              
-
-
-
-
-           
+                </Grid>         
         </div>
     );
 };
