@@ -19,6 +19,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import paella from 'assets/images/paella.jpg';
 import Button from '@mui/material/Button';
+import 'App.css'
+
 const Recipes = ({title, description, carbohydrates, calories, image, id}) => {
 
 

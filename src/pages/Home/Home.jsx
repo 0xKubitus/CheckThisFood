@@ -29,7 +29,7 @@ console.log(recipes)
             <h1>Les meilleures recettes</h1>
             <SearchFoodData />
             <Grid container sx={{justifyContent: 'center', padding:'5px'}}>
-                <Grid item xs={4}>
+                
                 { 
 recipes.map((item => 
 
@@ -43,7 +43,7 @@ id={item.id} />
 ))
            
 }
-                </Grid>
+                
 
                 </Grid>
               
