@@ -11,6 +11,9 @@ import SingleRecipe from './components/SingleRecipe';
 import Show from './pages/Show/Show';
 import SearchFoodData from 'components/SearchFoodData';
 import SearchRecipe from 'components/searchRecipe';
+import Breakfast from 'pages/Breakfasts/Breakfasts';
+import Meals from 'pages/Meals/Meals';
+import Snacks from 'pages/Snacks/Snacks';
 
 function App() {
     return (
@@ -31,6 +34,9 @@ function App() {
                     <Route path="/show" element={<Show />} />
                     <Route path="/search_food_data" element={<SearchFoodData />} />
                     <Route path="/search_recipe" element={<SearchRecipe />} />
+                    <Route path="/breakfast" element={<Breakfast />} />
+                    <Route path="/meal" element={<Meals />} />
+                    <Route path="/snack" element={<Snacks />} />
 
                     {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}
