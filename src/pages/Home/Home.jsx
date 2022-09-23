@@ -28,7 +28,55 @@ console.log(recipes)
             Homepage
             <h1>Les meilleures recettes</h1>
         
-            <Grid container>
+            <Grid container spacing={2}>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
+                <Grid item xs={4}>
+                <RecipeReviewCard/>
+                </Grid>
                 <Grid item xs={4}>
                 <RecipeReviewCard/>
                 </Grid>
