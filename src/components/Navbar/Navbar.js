@@ -13,6 +13,8 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import LogoutIcon from '@mui/icons-material/Logout';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { styled, alpha } from '@mui/material/styles';
+import AddIcon from '@mui/icons-material/Add';
+import LoggedOut from 'pages/Sign/LoggedOut';
 
 const StyledMenu = styled((props) => (
     <Menu
@@ -64,7 +66,8 @@ const Navbar = () => {
 
     return (
         <nav className="navbar-main">
-            <Button style = {{backgroundColor:'#2f4050'}}
+            <Button
+                style={{ backgroundColor: '#2f4050' }}
                 id="demo-customized-button"
                 aria-controls={open ? 'demo-customized-menu' : undefined}
                 aria-haspopup="true"
@@ -73,8 +76,9 @@ const Navbar = () => {
                 disableElevation
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}>
-                S'inscrire / Se connecter
+                Mon compte
             </Button>
+
             <StyledMenu
                 id="demo-customized-menu"
                 MenuListProps={{
@@ -83,44 +87,46 @@ const Navbar = () => {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}>
-                <MenuItem onClick={handleClose} disableRipple>
-                    <HowToRegIcon />
+                {!userStatus ? (
+                    <div>
+                        <MenuItem onClick={handleClose} disableRipple>
+                            <HowToRegIcon />
 
-                    <Link to="/signup" className="navbar-first-link" style={{color: '#2f4050'}}>
-                        S'inscrire
-                    </Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose} disableRipple>
-                    <VpnKeyIcon />
-                    <Link to="/login" className="navbar-second-link" style={{color: '#2f4050'}}>
-                        Se connecter
-                    </Link>
-                </MenuItem>
+                            <Link to="/signup" className="navbar-first-link" style={{ color: '#2f4050' }}>
+                                S'inscrire
+                            </Link>
+                        </MenuItem>
 
-                <Divider sx={{ my: 0.5 }} />
+                        <MenuItem onClick={handleClose} disableRipple>
+                            <VpnKeyIcon />
 
-                <MenuItem onClick={handleClose} disableRipple>
-                    <LogoutIcon />
-                    {/* <LogoutBtn /> */}
-                    Se déconnecter
-                </MenuItem>
+                            <Link to="/login" className="navbar-second-link" style={{ color: '#2f4050' }}>
+                                Se connecter
+                            </Link>
+                        </MenuItem>
+                    </div>
+                ) : (
+                    <div>
+                        <MenuItem onClick={handleClose} disableRipple>
+                            <AddIcon />
+
+                            <Link to="/recette" className="navbar-second-link" style={{ color: '#2f4050' }}>
+                                Ajouter une recette
+                            </Link>
+                        </MenuItem>
+
+                        <Divider sx={{ my: 0.5 }} />
+
+                        <MenuItem onClick={handleClose} disableRipple>
+                            <LogoutIcon 
+                            />
+                        <LoggedOut />
+                            
+                            
+                        </MenuItem>
+                    </div>
+                )}
             </StyledMenu>
-
-            {/* {!userStatus ? (
-                <span>
-                    <Link to ="/signup" style={{ textDecoration: 'none' }}className='navbar-first-link'>
-
-                    S'inscrire
-                    </Link>
-                    <Link to ="/login" className='navbar-second-link'>
-                        Se connecter
-                    </Link>
-                </span>
-            ) : (
-                <span>
-                    <LogoutBtn />
-                </span>
-            )} */}
         </nav>
     );
 };

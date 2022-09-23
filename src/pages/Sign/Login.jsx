@@ -5,12 +5,15 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import './Sign.css';
+import { useNavigate } from 'react-router-dom';
 
 import axios from 'api/axios';
 const LOGIN_URL = '/users/sign_in';
 
+
 const Login = () => {
     const [status, setStatus] = useAtom(isUserLogged);
+    const navigate = useNavigate();
 
     const [user, setUser] = useState('');
     const [userEmail, setEmail] = useState('');
@@ -44,7 +47,11 @@ const Login = () => {
                     },
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true, // probablement à enlever car ça me faisait une erreur CORS avec le SignUp
+                    
+                    
                 })
+               
+               
             );
             // console.log(JSON.stringify(response?.data)); // SHOULD BE A COMMENT
             // console.log(JSON.stringify(response)); // SHOULD BE A COMMENT
@@ -70,6 +77,7 @@ const Login = () => {
             }
             errRef.current.focus();
         }
+        navigate('/')
     };
 
     return (
