@@ -5,6 +5,7 @@ import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
 import RamenDiningIcon from '@mui/icons-material/RamenDining';
 import BrunchDiningIcon from '@mui/icons-material/BrunchDining';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import IcecreamIcon from '@mui/icons-material/Icecream';
 
 export const SidebarData = [
     {
@@ -31,15 +32,15 @@ export const SidebarData = [
     },
 
     {
-        title: 'Déjeuner',
-        icon: <RamenDiningIcon />,
-        link: '/lunch',
+        title: 'Snacks',
+        icon: <IcecreamIcon />,
+        link: '/snack',
     },
 
     {
-        title: 'Dîner',
-        icon: <BrunchDiningIcon />,
-        link: '/diner',
+        title: 'Déjeuner/Dîner',
+        icon: <RamenDiningIcon />,
+        link: '/meal',
     },
     {
         title: 'Recherche Recette',
