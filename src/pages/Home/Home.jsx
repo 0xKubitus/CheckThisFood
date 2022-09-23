@@ -21,19 +21,8 @@ const Home = () => {
     console.log(recipes);
     return (
         <div className="Home">
-            Homepage
             <h1>Les meilleures recettes</h1>
-            <Grid container>
-                <Grid item xs={4}>
-                    <RecipeReviewCard />
-                </Grid>
-                <Grid item xs={4}>
-                    <RecipeReviewCard />
-                </Grid>
-                <Grid item xs={4}>
-                    <RecipeReviewCard />
-                </Grid>
-            </Grid>
+
             {recipes.map((item) => (
                 <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
             ))}
