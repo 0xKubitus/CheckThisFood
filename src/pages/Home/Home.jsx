@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 import axios from 'api/axios';
 import 'App.css';
 import './Home.css';
-import RecipeReviewCard from 'components/Card/Card';
 import { Grid } from "@mui/material"
 import {Route, BrowserRouter} from 'react-router-dom'
+import { Margin } from '@mui/icons-material';
 
 
 
@@ -27,21 +27,10 @@ console.log(recipes)
             
             Homepage
             <h1>Les meilleures recettes</h1>
-        
-            <Grid container>
+            <SearchFoodData />
+            <Grid container sx={{justifyContent: 'center', padding:'5px'}}>
                 <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                <Grid item xs={4}>
-                <RecipeReviewCard/>
-                </Grid>
-                </Grid>
-              
-
-{ 
+                { 
 recipes.map((item => 
 
 <Recipes 
@@ -54,9 +43,15 @@ id={item.id} />
 ))
            
 }
+                </Grid>
+
+                </Grid>
+              
 
 
-            <SearchFoodData />
+
+
+           
         </div>
     );
 };
