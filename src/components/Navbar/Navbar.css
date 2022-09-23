@@ -1,6 +1,8 @@
 .navbar-main {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-left: 4vw;
+    margin-bottom: 10px;
 }
 
 .navbar-first-link {

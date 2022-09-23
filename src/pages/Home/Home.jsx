@@ -9,6 +9,7 @@ import RecipeReviewCard from 'components/Card/Card';
 import { Grid } from '@mui/material';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Margin } from '@mui/icons-material';
+import hero from 'assets/images/hero.gif'
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
@@ -21,9 +22,10 @@ const Home = () => {
     console.log(recipes);
     return (
         <div className="Home">
-            <h1>Les meilleures recettes</h1>
-
-            <SearchFoodData />
+            
+            <img style={{width:'100%', height:'600px', marginLeft:'15px', objectFit:'cover'}} src={hero} alt='heroimg'></img>
+            
+            <h1>Notre sélection</h1>
             <Grid container sx={{justifyContent: 'center', padding:'5px'}}>    
                 { 
 recipes.map((item => 
