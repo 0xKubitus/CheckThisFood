@@ -64,6 +64,4 @@ const Recipes = ({title, description, carbohydrates, calories, image, id}) => {
                     </div>
                 );}
 
-     
- 
 export default Recipes;
