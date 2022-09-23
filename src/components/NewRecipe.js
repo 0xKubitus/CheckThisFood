@@ -111,12 +111,12 @@ const NewRecipe = () => {
                 <br /><br />
                 
 
-                <select onChange={handleCategoryChange} label='catégorie'>
+                <Select sx={{ width: '70%'}} size= 'small' onChange={handleCategoryChange} label='catégorie'>
                 <option required value={categories} ></option> 
-                  <option required value={categories} >breakfast</option> 
-                  <option required value={categories} >[\"lunch/dinner\"]</option>
-                  <option required value={categories} >[\"snack\"]</option>  
-                </select>
+                  <MenuItem required value={categories} value='["breakfast"]'>Petit-dejeuner</MenuItem> 
+                  <MenuItem  required value={categories} value='["lunch/dinner"]'>Déjeuner / Dîner</MenuItem >
+                  <MenuItem  required value={categories} value='["snack"]'>Snack</MenuItem >  
+                </Select>
                 <br /><br />
 
 <label>Glucides</label>
@@ -139,7 +139,7 @@ const NewRecipe = () => {
                 ></TextField>
 
 <br /><br />
-<label>URL Image</label>
+<label>Lien Image URL</label>
 <br /><br />
                 <label htmlFor="image"></label>
                 <TextField  sx={{ width: '70%' }}
