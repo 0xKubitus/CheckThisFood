@@ -23,16 +23,22 @@ const Home = () => {
         <div className="Home">
             <h1>Les meilleures recettes</h1>
 
-            {recipes.map((item) => (
-                <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
-            ))}
             <SearchFoodData />
-            <SearchFoodData />
-            <Grid container sx={{ justifyContent: 'center', padding: '5px' }}>
-                {recipes.map((item) => (
-                    <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
-                ))}
-            </Grid>
+            <Grid container sx={{justifyContent: 'center', padding:'5px'}}>    
+                { 
+recipes.map((item => 
+<Recipes 
+title={item.attributes.title}
+description={item.attributes.description} 
+carbohydrates={item.attributes.carbohydrates}
+calories={item.attributes.calories}
+image={item.attributes.image_url}
+id={item.id} />
+))
+           
+}         
+                </Grid>         
+
         </div>
     );
 };
