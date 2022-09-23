@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 import './Sign.css';
 import axios from 'api/axios';
+import { useNavigate } from 'react-router-dom';
 
 const REGISTER_URL = '/users'; // <- here, we are defining a suffix for axios to use in HTTP request for signup (it is devise route for method users/registrations#create)
 
@@ -16,6 +17,7 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const SignUp = () => {
     const userRef = useRef();
     const errRef = useRef();
+    const navigate = useNavigate();
 
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false); // NO USE FOR MY RAILS API BOILERPLATE (because no username) ... BUT THIS TUTORIAL https://www.youtube.com/watch?v=3MA6kS2xpNA&t=38s EXPLAINS HOW TO ADD USERNAME TO DEVISE
@@ -109,6 +111,7 @@ const SignUp = () => {
             }
             errRef.current.focus();
         }
+        navigate('/login')
     };
 
     return (
