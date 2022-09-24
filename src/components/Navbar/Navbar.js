@@ -69,7 +69,7 @@ const Navbar = () => {
     return (
         <nav className="navbar-main">
             <img style={{width:'auto', height:'70px'}}src={logonoletters} alt="logo"></img>
-            <h1 style={{fontSize:'50px'}}>CHECK THIS FOOD</h1>
+            <h1 style={{fontSize:'50px', color:'#054a29'}}>CHECK THIS FOOD</h1>
             <Button
                 style={{ backgroundColor: '#2f4050', height:"40px" }}
                 id="demo-customized-button"

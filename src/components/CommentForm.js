@@ -1,13 +1,14 @@
 import React from 'react'
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const CommentForm = (props) => {
   return (
     <div>
-     <h3>laissez un commentaire pour {props.attributes.title}</h3>
         <form onSubmit={props.handleSubmit}>
-            <label>Tapez votre commentaire</label>
-            <input onChange={props.handleChange} value={props.comment.content} type="text" name="content" placeholder='tapez votre commentaire'></input>
-            <button type='submit'>Envoyer</button>
+            
+            <TextField onChange={props.handleChange} value={props.comment.content} type="text" name="content" placeholder='Votre commentaire'></TextField><br/>
+            <Button variant='contained' style={{margin:"10px"}}type='submit'>Envoyer</Button>
         </form>
     </div>
   )
