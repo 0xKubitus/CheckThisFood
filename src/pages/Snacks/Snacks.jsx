@@ -5,10 +5,9 @@ import { Grid } from '@mui/material';
 
 // const dev_backend_url = 'http://localhost:3001';
 
-const URL = 'http://localhost:3001/breakfast';
+const URL = 'http://localhost:3001/snacks';
 
 //const URL = `${process.env.REACT_APP_BASE_URL}/snacks`;
-
 
 const Snacks = () => {
     const [snacksRecipes, setSnacksRecipes] = useState([]);
@@ -21,9 +20,9 @@ const Snacks = () => {
     return (
         <div>
             <Grid container sx={{ justifyContent: 'center', padding: '5px' }}>
-            {snacksRecipes.map((item) => (
-                <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
-            ))}
+                {snacksRecipes.map((item) => (
+                    <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
+                ))}
             </Grid>
         </div>
     );
