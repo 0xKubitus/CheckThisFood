@@ -45,7 +45,7 @@ const NewRecipe = () => {
     const handleSubmit = (e) => {
         const data = { title, description, carbohydrates, calories, image_url, categories };
 
-        fetch(`${process.env.REACT_BASE_URL}/recipes`, {
+        fetch("http://localhost:3001/recipes", {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
