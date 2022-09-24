@@ -14,6 +14,7 @@ import SearchRecipe from 'components/searchRecipe';
 import Breakfast from 'pages/Breakfasts/Breakfasts';
 import Meals from 'pages/Meals/Meals';
 import Snacks from 'pages/Snacks/Snacks';
+import AllRecipes from 'pages/AllRecipes/AllRecipes';
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/breakfast" element={<Breakfast />} />
                     <Route path="/meal" element={<Meals />} />
                     <Route path="/snack" element={<Snacks />} />
+                    <Route path="/all_recipes" element={<AllRecipes />} />
 
                     {/* <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/property/:id" element={<Property />} /> */}

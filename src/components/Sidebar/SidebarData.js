@@ -24,7 +24,7 @@ export const SidebarData = [
     {
         title: 'Toutes les Recettes',
         icon: <RestaurantIcon />,
-        link: '/recipe',
+        link: '/all_recipes',
     },
 
     {
