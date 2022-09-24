@@ -45,7 +45,7 @@ const NewRecipe = () => {
     const handleSubmit = (e) => {
         const data = { title, description, carbohydrates, calories, image_url, categories };
 
-        fetch("http://localhost:3001/recipes", {
+        fetch(`${process.env.REACT_APP_BASE_URL}/recipes`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -86,13 +86,13 @@ const NewRecipe = () => {
 
                             <Select sx={{ width: '70%' }} size="small" onChange={handleCategoryChange} label="catégorie">
                                 <option required value={categories}></option>
-                                <MenuItem required value={categories} value='["breakfast"]'>
+                                <MenuItem required value={categories}>
                                     Petit-dejeuner
                                 </MenuItem>
-                                <MenuItem required value={categories} value='["lunch/dinner"]'>
+                                <MenuItem required value={categories}>
                                     Déjeuner / Dîner
                                 </MenuItem>
-                                <MenuItem required value={categories} value='["snack"]'>
+                                <MenuItem required value={categories}>
                                     Snack
                                 </MenuItem>
                             </Select>

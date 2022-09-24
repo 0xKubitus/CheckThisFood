@@ -3,9 +3,10 @@ import axios from 'api/axios';
 import Recipes from 'components/Recipes';
 import { Grid } from '@mui/material';
 
-// const dev_backend_url = 'http://localhost:3001';
+const dev_backend_url = 'http://localhost:3001';
+const prod_backend_url = 'https://repoback.herokuapp.com/';
 
-const URL = 'http://localhost:3001/meals';
+const URL = `${dev_backend_url}/meals`;
 
 //const URL = `${process.env.REACT_APP_BASE_URL}/meals`;
 

@@ -19,9 +19,9 @@ const Breakfast = () => {
     return (
         <div>
             <Grid container sx={{ justifyContent: 'center', padding: '5px' }}>
-            {breakfastRecipes.map((item) => (
-                <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
-            ))}
+                {breakfastRecipes.map((item) => (
+                    <Recipes title={item.attributes.title} description={item.attributes.description} carbohydrates={item.attributes.carbohydrates} calories={item.attributes.calories} image={item.attributes.image_url} id={item.id} />
+                ))}
             </Grid>
         </div>
     );

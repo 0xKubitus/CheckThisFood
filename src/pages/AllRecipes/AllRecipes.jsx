@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 
 // const dev_backend_url = 'http://localhost:3001';
 
-const URL = 'http://localhost:3001/recipes';
+const URL = `${process.env.REACT_APP_BASE_URL}/recipes`;
 //const URL = `${process.env.REACT_APP_BASE_URL}/recipes`;
 
 const AllRecipes = () => {

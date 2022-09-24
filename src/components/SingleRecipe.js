@@ -13,7 +13,7 @@ const SingleRecipe = (props) => {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        const API_URL = `http://localhost:3001/recipes/${Id.id}`;
+        const API_URL = `${process.env.REACT_APP_BASE_URL}/recipes/${Id.id}`;
         axios
             .get(API_URL)
             .then((resp) => {
@@ -27,7 +27,7 @@ const SingleRecipe = (props) => {
     }, []);
 
     useEffect(() => {
-        const API_URL = `http://localhost:3001/recipes/${Id.id}`;
+        const API_URL = `${process.env.REACT_APP_BASE_URL}/recipes/${Id.id}`;
         axios
             .get(API_URL)
             .then((resp) => {
@@ -51,7 +51,7 @@ const SingleRecipe = (props) => {
         console.log(recipe_id);
         console.log(comment);
         axios
-            .post('http://localhost:3001/comments/', { comment, recipe_id })
+            .post(`${process.env.REACT_APP_BASE_URL}/comments/`, { comment, recipe_id })
             .then((resp) => {
                 // const included = [...recipe.included, resp.data]
                 // setRecipe({recipe, included})
