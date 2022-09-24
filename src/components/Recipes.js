@@ -25,22 +25,10 @@ const Recipes = ({ title, description, carbohydrates, calories, image, id }) => 
     return (
         <div style={{ padding: '10px' }} className="cards">
             <Card sx={{ maxWidth: 345 }}>
-                <CardHeader
-                    avatar={
-                        <Avatar sx={{ bgcolor: blue[800] }} aria-label="recipe">
-                            C
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton> /*à garder uniquement pour admin (et peut-être user qui a créé la recette)*/
-                    }
-                    title="Check this Food"
-                />
+                
                 <CardMedia component="img" width="300" image={image} alt="image" />
                 <CardContent>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="text.primary">
                         {title}
                     </Typography>
                 </CardContent>
@@ -49,7 +37,7 @@ const Recipes = ({ title, description, carbohydrates, calories, image, id }) => 
                     <IconButton aria-label="add to favorites">
                         <FavoriteIcon />
                     </IconButton>
-                    <Button variant="contained" href="#text-buttons">
+                    <Button variant="contained">
                         <Link to={`../recipes/${id}`}>Voir</Link>
                     </Button>
                     <IconButton aria-label="share">
