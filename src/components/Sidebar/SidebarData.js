@@ -6,6 +6,7 @@ import RamenDiningIcon from '@mui/icons-material/RamenDining';
 import BrunchDiningIcon from '@mui/icons-material/BrunchDining';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import IcecreamIcon from '@mui/icons-material/Icecream';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 export const SidebarData = [
     {
@@ -21,7 +22,8 @@ export const SidebarData = [
     },
 
     {
-        title: 'Recettes',
+        title: 'Toutes les Recettes',
+        icon: <RestaurantIcon />,
         link: '/recipe',
     },
 

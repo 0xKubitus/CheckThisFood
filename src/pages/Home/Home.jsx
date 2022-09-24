@@ -12,12 +12,11 @@ import { Margin } from '@mui/icons-material';
 import hero from 'assets/images/hero.gif';
 
 const Home = () => {
-    const BASE_URL = process.env.REACT_APP_BASE_URL;
 
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        const API_URL = BASE_URL + '/trends';
+        const API_URL = 'http://localhost:3001/trends';
         axios.get(API_URL).then((resp) => setRecipes(resp.data.data));
         // eslint-disable-next-line
     }, []);

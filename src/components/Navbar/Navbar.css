@@ -1,8 +1,9 @@
 .navbar-main {
     display: flex;
     justify-content: space-between;
-    margin-left: 4vw;
+    margin-left: 5vw;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .navbar-first-link {
