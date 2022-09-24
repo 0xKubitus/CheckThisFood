@@ -4,7 +4,7 @@ import Recipes from 'components/Recipes';
 
 // const dev_backend_url = 'http://localhost:3001';
 
-const URL = `${process.env.REACT_APP_BASE_URL}/breakfast`;
+const URL = `${process.env.REACT_APP_BASE_URL}/meals`;
 
 const Meals = () => {
     const [mealsRecipes, setMealsRecipes] = useState([]);
