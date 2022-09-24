@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'api/axios';
 import Home from '../pages/Home/Home';
@@ -50,7 +50,7 @@ const Recipes = ({ title, description, carbohydrates, calories, image, id }) => 
                         <FavoriteIcon />
                     </IconButton>
                     <Button variant="contained" href="#text-buttons">
-                        <Link to={`recipes/${id}`}>Voir</Link>
+                        <Link to={`../recipes/${id}`}>Voir</Link>
                     </Button>
                     <IconButton aria-label="share">
                         <ShareIcon />
