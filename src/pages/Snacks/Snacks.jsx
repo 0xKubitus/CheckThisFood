@@ -7,6 +7,9 @@ import { Grid } from '@mui/material';
 
 const URL = 'http://localhost:3001/breakfast';
 
+//const URL = `${process.env.REACT_APP_BASE_URL}/snacks`;
+
+
 const Snacks = () => {
     const [snacksRecipes, setSnacksRecipes] = useState([]);
 
