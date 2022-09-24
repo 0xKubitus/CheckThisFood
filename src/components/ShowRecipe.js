@@ -15,7 +15,7 @@ const ShowRecipe = (props) => {
                 width={300}></img>
                 <h2 style={{padding:"10px"}}>Ingrédients</h2>
             <p>{description}</p>
-            <h3 style={{padding:"10px"}}>Informations nutritionnelles par partion : </h3>
+            <h3 style={{padding:"10px"}}>Informations nutritionnelles par portion : </h3>
             <p>Glucides : {carbohydrates} grammes</p>
             <p>Calories : {calories} kcal</p>
 
