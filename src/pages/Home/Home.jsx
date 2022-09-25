@@ -16,7 +16,11 @@ const Home = () => {
 
     useEffect(() => {
         const API_URL = `${process.env.REACT_APP_BASE_URL}/trends`;
-        axios.get(API_URL).then((resp) => setRecipes(resp.data.data));
+        axios
+            .get(API_URL, {
+                headers: { Origin: 'https://checkthisfood-frontend.herokuapp.com' },
+            })
+            .then((resp) => setRecipes(resp.data.data));
         // eslint-disable-next-line
     }, []);
     console.log(recipes);
