@@ -3,10 +3,7 @@ import axios from 'api/axios';
 import Recipes from 'components/Recipe/Recipes';
 import { Grid } from '@mui/material';
 
-// const dev_backend_url = 'http://localhost:3001';
-
 const URL = `${process.env.REACT_APP_BASE_URL}/recipes`;
-//const URL = `${process.env.REACT_APP_BASE_URL}/recipes`;
 
 const AllRecipes = () => {
     const [recipes, setRecipes] = useState([]);

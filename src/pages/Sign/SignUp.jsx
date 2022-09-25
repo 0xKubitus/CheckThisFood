@@ -1,6 +1,4 @@
 import { useRef, useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
@@ -111,7 +109,7 @@ const SignUp = () => {
             }
             errRef.current.focus();
         }
-        navigate('/login')
+        navigate('/login');
     };
 
     return (
@@ -131,17 +129,15 @@ const SignUp = () => {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">
-                           Nom d'utilisateur 
-                            <span className={validName ? 'valid' : 'hide'}>
-                              
-                            </span>
-                            <span className={validName || !user ? 'hide' : 'invalid'}>
-                                
-                            </span>
+                            Nom d'utilisateur
+                            <span className={validName ? 'valid' : 'hide'}></span>
+                            <span className={validName || !user ? 'hide' : 'invalid'}></span>
                         </label>
                         <br />
 
-                        <TextField variant="outlined" size="small" 
+                        <TextField
+                            variant="outlined"
+                            size="small"
                             type="text"
                             id="username"
                             ref={userRef}
@@ -155,26 +151,19 @@ const SignUp = () => {
                         />
 
                         <p id="usernamenote" className={userFocus && user && !validName ? 'instructions' : 'offscreen'}>
-                            
-                            <i>4 à 24 caractères.
-                          
-                            Doit commencer par une lettre.
-                          
-                            Lettres, nombres, underscores, tirets autorisés</i>
+                            <i>4 à 24 caractères. Doit commencer par une lettre. Lettres, nombres, underscores, tirets autorisés</i>
                         </p>
                         <br />
 
                         <label htmlFor="userEmail">
                             Email
-                            <span className={validEmail ? 'valid' : 'hide'}>
-                                
-                            </span>
-                            <span className={validEmail || !userEmail ? 'hide' : 'invalid'}>
-                                
-                            </span>
+                            <span className={validEmail ? 'valid' : 'hide'}></span>
+                            <span className={validEmail || !userEmail ? 'hide' : 'invalid'}></span>
                         </label>
                         <br />
-                        <TextField variant="outlined" size="small" 
+                        <TextField
+                            variant="outlined"
+                            size="small"
                             type="text"
                             id="email"
                             ref={userRef}
@@ -188,25 +177,20 @@ const SignUp = () => {
                         />
 
                         <p id="emailnote" className={emailFocus && userEmail && !validEmail ? 'instructions' : 'offscreen'}>
-                            
-                           
-                            
                             <i>Un compte par email autorisé</i>
                         </p>
                         <br />
 
                         <label htmlFor="password">
                             Mot de passe
-                            <span className={validPwd ? 'valid' : 'hide'}>
-                                
-                            </span>
-                            <span className={validPwd || !pwd ? 'hide' : 'invalid'}>
-                             
-                            </span>
+                            <span className={validPwd ? 'valid' : 'hide'}></span>
+                            <span className={validPwd || !pwd ? 'hide' : 'invalid'}></span>
                         </label>
                         <br />
 
-                        <TextField variant="outlined" size="small" 
+                        <TextField
+                            variant="outlined"
+                            size="small"
                             type="password"
                             id="password"
                             onChange={(e) => setPwd(e.target.value)}
@@ -217,27 +201,21 @@ const SignUp = () => {
                             onBlur={() => setPwdFocus(false)}
                         />
                         <p id="pwdnote" className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}>
-                            
-                            <i>8 à 24 caractères.
-                           
-                           Doit contenir une majuscule, minuscule, un nombre et un caractère spécial : 
-                            
-
-                             <span aria-label="exlamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span></i>
+                            <i>
+                                8 à 24 caractères. Doit contenir une majuscule, minuscule, un nombre et un caractère spécial :<span aria-label="exlamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span>{' '}
+                                <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                            </i>
                         </p>
 
                         <br />
                         <label htmlFor="confirm_pwd">
-                            Confirmez votre mot de passe :
-                            <span className={validPwdConfirm && pwdConfirm ? 'valid' : 'hide'}>
-                                
-                            </span>
-                            <span className={validPwdConfirm || !pwdConfirm ? 'hide' : 'invalid'}>
-                                
-                            </span>
+                            Confirmez votre mot de passe :<span className={validPwdConfirm && pwdConfirm ? 'valid' : 'hide'}></span>
+                            <span className={validPwdConfirm || !pwdConfirm ? 'hide' : 'invalid'}></span>
                         </label>
                         <br />
-                        <TextField variant="outlined" size="small" 
+                        <TextField
+                            variant="outlined"
+                            size="small"
                             type="password"
                             id="confirm_pwd"
                             onChange={(e) => setPwdConfirm(e.target.value)}
@@ -248,22 +226,20 @@ const SignUp = () => {
                             onBlur={() => setPwdConfirmFocus(false)}
                         />
                         <p id="confirmnote" className={pwdConfirmFocus && !validPwdConfirm ? 'instructions' : 'offscreen'}>
-                            
                             <i>Doit correspondre au mot de passe défini</i>
-                           
                         </p>
                         <br />
-                        <Button variant="outlined" onClick={handleSubmit} disabled={!validName || !validPwd || !validPwdConfirm ? true : false}>Inscription</Button>
+                        <Button variant="outlined" onClick={handleSubmit} disabled={!validName || !validPwd || !validPwdConfirm ? true : false}>
+                            Inscription
+                        </Button>
                     </form>
                     <p>
-                    <br />
+                        <br />
                         Déjà inscrit ?
                         <br />
                         <span className="line">
-                           
-                            
-                            <Link to='/login' style = {{ textDecoration: 'none' }}>
-                            <Button variant="outlined">Se connecter</Button>
+                            <Link to="/login" style={{ textDecoration: 'none' }}>
+                                <Button variant="outlined">Se connecter</Button>
                             </Link>
                         </span>
                     </p>

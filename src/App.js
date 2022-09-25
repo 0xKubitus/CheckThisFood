@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
 import Navbar from 'components/Navbar/Navbar';
 import Home from './pages/Home/Home';
@@ -6,7 +6,6 @@ import SignUp from './pages/Sign/SignUp';
 import Login from './pages/Sign/Login';
 import LoggedOut from './pages/Sign/LoggedOut';
 import NewRecipe from './components/Recipe/NewRecipe';
-import './App.css';
 import SingleRecipe from './components/Recipe/SingleRecipe';
 import SearchFoodData from 'components/Recipe/SearchFoodData';
 import SearchRecipe from 'components/Recipe/searchRecipe';
@@ -14,6 +13,7 @@ import Breakfast from 'pages/Breakfasts/Breakfasts';
 import Meals from 'pages/Meals/Meals';
 import Snacks from 'pages/Snacks/Snacks';
 import AllRecipes from 'pages/AllRecipes/AllRecipes';
+import './App.css';
 
 function App() {
     return (

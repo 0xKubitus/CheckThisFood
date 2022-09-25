@@ -10,16 +10,14 @@ const LoggedOut = () => {
     const handleLogout = () => {
         setStatus(false);
         navigate('/');
-        alert("Déconnecté avec succès")
+        alert('Déconnecté avec succès');
     };
 
     return (
         <Link to="/" onClick={handleLogout} className="navbar-second-link" style={{ color: '#2f4050' }}>
-        Se déconnecter
-    </Link>
-    
-    )
-    
+            Se déconnecter
+        </Link>
+    );
 };
 
 export default LoggedOut;

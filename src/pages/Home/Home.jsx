@@ -5,7 +5,7 @@ import Recipes from 'components/Recipe/Recipes';
 import { Grid } from '@mui/material';
 import hero from 'assets/images/hero.gif';
 import 'App.css';
-import './Home.css';
+import 'Home.css';
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
@@ -13,7 +13,6 @@ const Home = () => {
     useEffect(() => {
         const API_URL = `${process.env.REACT_APP_BASE_URL}/trends`;
         axios.get(API_URL).then((resp) => setRecipes(resp.data.data));
-        // eslint-disable-next-line
     }, []);
     console.log(recipes);
     return (

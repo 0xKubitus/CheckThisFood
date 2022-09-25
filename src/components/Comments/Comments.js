@@ -1,18 +1,11 @@
 import React from 'react';
 
-const Comments = ({title}) => {
-
-  return (
-
-        <div> 
-            
-            <li>{title}</li>    
-        
-         
+const Comments = ({ title }) => {
+    return (
+        <div>
+            <li>{title}</li>
         </div>
     );
-    
-  
-}
+};
 
-export default Comments
+export default Comments;

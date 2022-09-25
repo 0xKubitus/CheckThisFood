@@ -15,7 +15,7 @@ import { styled, alpha } from '@mui/material/styles';
 import AddIcon from '@mui/icons-material/Add';
 import LoggedOut from 'pages/Sign/LoggedOut';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import logonoletters from 'assets/images/logonoletters.png'
+import logonoletters from 'assets/images/logonoletters.png';
 
 const StyledMenu = styled((props) => (
     <Menu
@@ -67,10 +67,10 @@ const Navbar = () => {
 
     return (
         <nav className="navbar-main">
-            <img style={{width:'auto', height:'70px'}}src={logonoletters} alt="logo"></img>
-            <h1 style={{fontSize:'50px', color:'#054a29'}}>CHECK THIS FOOD</h1>
+            <img style={{ width: 'auto', height: '70px' }} src={logonoletters} alt="logo"></img>
+            <h1 style={{ fontSize: '50px', color: '#054a29' }}>CHECK THIS FOOD</h1>
             <Button
-                style={{ backgroundColor: '#2f4050', height:"40px" }}
+                style={{ backgroundColor: '#2f4050', height: '40px' }}
                 id="demo-customized-button"
                 aria-controls={open ? 'demo-customized-menu' : undefined}
                 aria-haspopup="true"
@@ -78,8 +78,8 @@ const Navbar = () => {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon/>}>
-                    <AccountCircleIcon fontSize="small" sx={{ mr: 2 }}  /> 
+                endIcon={<KeyboardArrowDownIcon />}>
+                <AccountCircleIcon fontSize="small" sx={{ mr: 2 }} />
                 Mon compte
             </Button>
 
@@ -122,11 +122,8 @@ const Navbar = () => {
                         <Divider sx={{ my: 0.5 }} />
 
                         <MenuItem onClick={handleClose} disableRipple>
-                            <LogoutIcon 
-                            />
-                        <LoggedOut />
-                            
-                            
+                            <LogoutIcon />
+                            <LoggedOut />
                         </MenuItem>
                     </div>
                 )}

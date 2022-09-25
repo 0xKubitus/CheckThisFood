@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 const API_BASE_URL = 'https://api.edamam.com';
 const API_RECIPE_SEARCH_URL = '/api/food-database/v2/parser?';
@@ -52,12 +52,7 @@ const SearchFoodData = () => {
                 <section className="search-food-data">
                     <form onSubmit={handleFoodSearchFormSubmit}>
                         <label>Rechercher les apports d'un aliment :</label>
-                        <input
-                            type="text"
-                            value={searchInput}
-                            name="search-food-data-input"
-                            onChange={(e) => setSearchInput(e.target.value)}
-                        />
+                        <input type="text" value={searchInput} name="search-food-data-input" onChange={(e) => setSearchInput(e.target.value)} />
                         <button>Rechercher</button>
                     </form>
                 </section>
@@ -65,10 +60,7 @@ const SearchFoodData = () => {
                 <>
                     <section>
                         <h1>{searchResult.food.label} - Détails</h1>
-                        <img
-                            src={searchResult.food.image}
-                            alt="search-result"
-                        />
+                        <img src={searchResult.food.image} alt="search-result" />
                         <p>Pour une unité (ou une portion) :</p>
                         <p>Calories = {searchResult.food.nutrients.ENERC_KCAL}kcal</p>
                         <p>Proteines = {searchResult.food.nutrients.PROCNT}g</p>
@@ -80,12 +72,7 @@ const SearchFoodData = () => {
                     <section className="search-food-data">
                         <form onSubmit={handleFoodSearchFormSubmit}>
                             <label>Rechercher les apports d'un aliment :</label>
-                            <input
-                                type="text"
-                                value={searchInput}
-                                name="search-food-data-input"
-                                onChange={(e) => setSearchInput(e.target.value)}
-                            />
+                            <input type="text" value={searchInput} name="search-food-data-input" onChange={(e) => setSearchInput(e.target.value)} />
                             <button>Rechercher</button>
                         </form>
                     </section>

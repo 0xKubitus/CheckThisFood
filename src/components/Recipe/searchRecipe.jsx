@@ -1,4 +1,4 @@
-import { useState /*useEffect, useRef*/ } from 'react';
+import { useState } from 'react';
 import RecipeResult from 'components/Recipe/RecipeResult';
 
 const API_BASE_URL = 'https://api.edamam.com';

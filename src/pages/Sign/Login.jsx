@@ -1,15 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAtom } from 'jotai';
 import { isUserLogged } from 'atoms/userStatus';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
 import './Sign.css';
-import { useNavigate } from 'react-router-dom';
-
 import axios from 'api/axios';
-const LOGIN_URL = '/users/sign_in';
 
+const LOGIN_URL = '/users/sign_in';
 
 const Login = () => {
     const [status, setStatus] = useAtom(isUserLogged);
@@ -47,11 +45,7 @@ const Login = () => {
                     },
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true, // probablement à enlever car ça me faisait une erreur CORS avec le SignUp
-                    
-                    
                 })
-               
-               
             );
             // console.log(JSON.stringify(response?.data)); // SHOULD BE A COMMENT
             // console.log(JSON.stringify(response)); // SHOULD BE A COMMENT
@@ -77,7 +71,7 @@ const Login = () => {
             }
             errRef.current.focus();
         }
-        navigate('/')
+        navigate('/');
     };
 
     return (
@@ -105,16 +99,18 @@ const Login = () => {
                         <TextField variant="outlined" size="small" type="password" id="password" onChange={(e) => setPwd(e.target.value)} value={pwd} required />
                         <br />
                         <br />
-                        <Button variant="outlined" onClick={handleSubmit}>Login</Button>
+                        <Button variant="outlined" onClick={handleSubmit}>
+                            Login
+                        </Button>
                     </form>
                     <p>
-                    <br />
+                        <br />
                         Pas encore inscrit ?
                         <br />
                         <span className="line">
                             {/* put router link here */}
-                            <Link to='/signup' style={{ textDecoration: 'none' }}>
-                            <Button variant="outlined">S'inscrire</Button>
+                            <Link to="/signup" style={{ textDecoration: 'none' }}>
+                                <Button variant="outlined">S'inscrire</Button>
                             </Link>
                         </span>
                     </p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -15,7 +15,6 @@ const Recipes = ({ title, description, carbohydrates, calories, image, id }) => 
     return (
         <div style={{ padding: '10px' }} className="cards">
             <Card sx={{ maxWidth: 345 }}>
-                
                 <CardMedia component="img" width="300" image={image} alt="image" />
                 <CardContent>
                     <Typography variant="body1" color="text.primary">
