@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'api/axios';
-import Recipes from 'components/Recipes';
+import Recipes from 'components/Recipe/Recipes';
 import { Grid } from '@mui/material';
 
 // const dev_backend_url = 'http://localhost:3001';

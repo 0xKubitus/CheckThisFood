@@ -5,12 +5,11 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/Sign/SignUp';
 import Login from './pages/Sign/Login';
 import LoggedOut from './pages/Sign/LoggedOut';
-import NewRecipe from './components/NewRecipe';
+import NewRecipe from './components/Recipe/NewRecipe';
 import './App.css';
-import SingleRecipe from './components/SingleRecipe';
-import Show from './pages/Show/Show';
-import SearchFoodData from 'components/SearchFoodData';
-import SearchRecipe from 'components/searchRecipe';
+import SingleRecipe from './components/Recipe/SingleRecipe';
+import SearchFoodData from 'components/Recipe/SearchFoodData';
+import SearchRecipe from 'components/Recipe/searchRecipe';
 import Breakfast from 'pages/Breakfasts/Breakfasts';
 import Meals from 'pages/Meals/Meals';
 import Snacks from 'pages/Snacks/Snacks';
@@ -32,7 +31,6 @@ function App() {
                     <Route path="/logout" element={<LoggedOut />} />
                     <Route path="/recette" element={<NewRecipe />} />
                     <Route path="/recipes/:id" element={<SingleRecipe />} />
-                    <Route path="/show" element={<Show />} />
                     <Route path="/search_food_data" element={<SearchFoodData />} />
                     <Route path="/search_recipe" element={<SearchRecipe />} />
                     <Route path="/breakfast" element={<Breakfast />} />
