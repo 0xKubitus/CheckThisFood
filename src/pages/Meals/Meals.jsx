@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'api/axios';
-import Recipes from 'components/Recipes';
+import Recipes from 'components/Recipe/Recipes';
 import { Grid } from '@mui/material';
 
 const URL = `${process.env.REACT_APP_BASE_URL}/meals`;

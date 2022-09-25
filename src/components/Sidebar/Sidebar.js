@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { SidebarData } from "./SidebarData";
 import logo from 'assets/images/Logoctf.png'
-import MenuIcon from '@mui/icons-material/Menu';
 
 function Sidebar() {
   

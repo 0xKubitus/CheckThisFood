@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'api/axios';
 import ShowRecipe from './ShowRecipe';
-import Comments from './Comments';
-import CommentForm from './CommentForm';
+import Comments from '../Comments/Comments';
+import CommentForm from '../Comments/CommentForm';
 
 const SingleRecipe = (props) => {
     const Id = useParams();
