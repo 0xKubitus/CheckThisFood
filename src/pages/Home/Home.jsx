@@ -1,15 +1,11 @@
-import Recipes from 'components/Recipes';
-import SearchFoodData from 'components/SearchFoodData';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'api/axios';
+import Recipes from 'components/Recipes';
+import { Grid } from '@mui/material';
+import hero from 'assets/images/hero.gif';
 import 'App.css';
 import './Home.css';
-import RecipeReviewCard from 'components/Card/Card';
-import { Grid } from '@mui/material';
-import { Route, BrowserRouter } from 'react-router-dom';
-import { Margin } from '@mui/icons-material';
-import hero from 'assets/images/hero.gif';
 
 const Home = () => {
     const [recipes, setRecipes] = useState([]);
