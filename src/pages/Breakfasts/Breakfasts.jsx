@@ -3,10 +3,7 @@ import axios from 'api/axios';
 import Recipes from 'components/Recipes';
 import { Grid } from '@mui/material';
 
-const dev_backend_url = 'http://localhost:3001';
-const production_backend_url = 'https://repoback.herokuapp.com';
-
-const URL = dev_backend_url + '/breakfast';
+const URL = `${process.env.REACT_APP_BASE_URL}/breakfast`;
 
 const Breakfast = () => {
     const [breakfastRecipes, setBreakfastRecipes] = useState([]);
