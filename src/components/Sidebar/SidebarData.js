@@ -3,7 +3,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import BakeryDiningIcon from '@mui/icons-material/BakeryDining';
 import RamenDiningIcon from '@mui/icons-material/RamenDining';
-import BrunchDiningIcon from '@mui/icons-material/BrunchDining';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import IcecreamIcon from '@mui/icons-material/Icecream';
 import RestaurantIcon from '@mui/icons-material/Restaurant';

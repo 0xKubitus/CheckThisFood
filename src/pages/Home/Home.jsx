@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'api/axios';
-import Recipes from 'components/Recipes';
+import Recipes from 'components/Recipe/Recipes';
 import { Grid } from '@mui/material';
 import hero from 'assets/images/hero.gif';
 import 'App.css';

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Button from '@mui/material/Button';
 import './Newrecipe.css';
 import Grid from '@mui/material/Grid';
@@ -9,7 +8,6 @@ import Box from '@mui/material/Box';
 import DataSaverOnIcon from '@mui/icons-material/DataSaverOn';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
 
 const NewRecipe = () => {
     const [title, setTitle] = useState();
